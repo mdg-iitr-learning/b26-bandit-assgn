@@ -1,0 +1,236 @@
+0 -> ssh bandit0@bandit.labs.overthewire.org -p 2220 -> bandit0
+
+1 -> NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL -> cat readme
+2 -> rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi - > cat ./-
+3 -> aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG -> cat "spaces in the filename"
+4 -> 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe -> cd .. , la ,  cat .hidden
+5 -> lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR -> man file, file ./* , cat ./-file07
+6 -> P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU - > man find , find ./ -size 1033 c , cat ./maybehere07/.file2  #c for bytes
+7 -> z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S -> man find , find / -size 33c -group bandit6 -user bandit7 -print 2>/dev/null #print statement to remove permission denied error
+8 -> TESKZC0XvTetK0S9xNwm25STk5iWrBvP -> man grep , cat data.txt | grep "millionth"
+9 -> EN632PlfYiZbn3PhVK3XOGSlNInNE00t -> man uniq , cat data.txt | sort | uniq -u
+10 -> G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s -> strings data.txt
+11 -> 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM -> cat data.txt | base64 -d
+-------------------------------------------------------------------------------------------------------
+12 -> wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw -> 
+1  ls
+    2  mkdir /tmp/gawd
+    3  cp data.txt /tmp/gawd/data.txt
+    4  cd /tmp/gawd
+    5  ls
+    6  cat data.txt 
+    7  xxd data.txt -r
+    8  ls
+    9  cat -r
+   10  cat ./-r
+   11  rm ./-r
+   12  cat data.txt | xxd -r
+   13  ls
+   14  cat data.txt | xxd -r >new
+   15  ls
+   16  file new
+   17  gzip -d new
+   18  gzip new -d
+   19  gzip -d
+   20  cat new | gzip -d
+   21  gzip -d new
+   22  ls
+   23  file new
+   24  cat data.txt | xxd -r >new1.gz
+   25  file new1
+   26  file ./*
+   27  gunzip
+   28  gunzip new
+   29  man mv
+   30  mv new new.gz
+   31  gzip new.gz -d
+   32  ls
+   33  file ./*
+   34  gzip new1.gz -d
+   35  ls
+   36  file ./*
+   37  rm -r new1
+   38  mv new new.bz2
+   39  bzip new.bz2 -d
+   40  bzip2 new.bz2 -d
+   41  ls
+   42  file ./*
+   43  mv new new.gz
+   44  gzip -d new.gz
+   45  ls
+   46  file ./new
+   47  mv new new.tar
+   48  tar -x new.tar
+   49  tar -xvf new.tar
+   50  ls
+   51  cat data5.bin
+   52  file ./*
+   53  mv data5.bin new.tar
+   54  tar -xvf new.tar
+   55  file ./*
+   56  mv data6.bin new.bz2
+   57  bzip2 -d new.bz2 
+   58  ls
+   59  cat data.txt
+   60  file ./*
+   61  mv new newer.tar
+   62  ls
+   63  tar -xvf newer.tar
+   64  file ./*
+   65  mv data8.bin newest.gz
+   66  gzip -d newest.gz 
+   67  ls
+   68  file ./*
+   69  cat newest
+-------------------------------------------------------------------------------
+13 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq -> man ssh , ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220 , cat /etc/bandit_pass/bandit14
+
+
+14 jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt -> nc localhost 30000
+15 JQttfApK4SeyHwDlI9SXGR50qclOAil1 -> openssl s_client -connect localhost:30001
+
+---------------------------------------------------------------------------------------
+
+16 
+nmap localhost
+nmap localhost -p 31000-32000
+openssl s_client -connect localhost:31960
+openssl s_client -connect localhost:31790
+
+-----BEGIN CERTIFICATE-----
+MIIDCzCCAfOgAwIBAgIEKUhGfDANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMjMwNDA3MTcxOTAxWhcNMjMwNDA3MTcyMDAxWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4
+UsBU61hSURhT6yKx4QoDHlDGMBt25T3KXdAvCTnAoZRo5D5/VQgIEM5V0ypMPotC
+YfKWdQ0o4G38rAjFyp4EVTo0ljlF0oJUMCugrM0otYtpgJ8q0yYRCQzJZs7yqaSC
+ZS+5v/DDiuF0NYkobJTIfmnn3KoT40t88lSdDYV/vd9QYPuPD0LUAvV/N6IESl8A
+ELHVPXuoNPbWYQ4wTOVWivjLiQx2ini9R//ya7yA6Xm3BMkVmJyqhuF+DEzUsMA5
+Drjsk/GCMscZwAZSWLwnvlPLZgH7zRc8ShrPNnzyQtJDw3vvS0ScyWXGFBDoEMBD
+xoDmMSlVWkHKWpSeROxXAgMBAAGjZTBjMBQGA1UdEQQNMAuCCWxvY2FsaG9zdDBL
+BglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0ZWQgYnkgTmNhdC4g
+U2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3DQEBBQUAA4IBAQAV
+KOciIwgJRGUnigmIttcMkIz/jBr18MaVpUIdu6hSmGJpe+mEH7QqwdLeBr7WrB3G
+Ogt9V8wWggc9W6qoBqRPIi4C+tp35SWDpYTA6mZB4lxnVNdmox2C4NjQIrokinhA
+53PIVWu1tF+xtxtMAIx9MLgVr2MtUPShSYeC7tOrP9ZXj9onznxGvrX5RIEwn6yB
+PNZJ5Xn4MYksh1VG7s9E/HELSNiSBnb8tMGILMWTVfL1ME1ASgm+HTnUpVvJdOed
+hdmbFT4Be9pP1SskUyeKbCWmDJ+GK6mg9UKjVIMdkVg8XvKEB11n8G2DVzZW3bIy
++JMKDw7zAJP/IAPJ2hTu
+-----END CERTIFICATE-----
+
+chmod 600 sshkey.private 
+ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
+
+
+----------------------------------------------------------------------------------------------
+17
+hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+
+diff passwords.new  passwords.old
+----------------------------------------------------------------------------------------
+18
+awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'ls'
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'cat readme'
+------------------------------------------------------------------------------------------
+19
+VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+./bandit20-do  cat /etc/bandit_pass/bandit20
+
+------------------------------
+20
+NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+echo "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | nc -l 10000
+-------------------------------
+21
+WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+cd /etc/cron.d
+cat cronjob_bandit22
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+------------------------------------
+22
+QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+ 1  cd /etc/cron.d/ 
+    2  ls
+    3  cat cronjob_bandit23
+    4  cat /usr/bin/cronjob_bandit23.sh
+
+10  (echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+   11  cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+---------------------------------------
+23 -> similar to 22
+VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+------------------
+24 ->
+p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+mktemp
+nano bruteforce.sh
+#!/bin/bash
+
+for i in {0000..9999}
+do
+        echo VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i >> possibilities.txt
+done
+
+cat possibilities.txt | nc localhost 30002 > result.txt
+sort result.txt | grep -v "Wrong!"
+-----------------------------
+25->27
+
+26 was logging and getting the shell and i logged in using rsa private key
+
+YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+ssh -i bandit26.sshkey bandit26@bandit.labs.overthewire.org -p 2220
+:q set shell=/usr/bin
+shell
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+-----------------------------------------------------------
+
+28
+AVanL161y9rsbcJIsFHuw35rjaOM19nR
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+cd repo
+cat README
+---------
+
+
+29
+tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+git clone ssh://bandit28-git@localhost:2220/home/bandit27-git/repo
+cat readme
+git log
+git show 104db85a904e9691ff22aafe1a96124c88f75afa --> it had fix info leak so maybe this
+
+30
+xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+git clone ssh://bandit28-git@localhost:2220/home/bandit27-git/repo
+cat readme --> HINT TO CHECK OTHER BRANCHES 
+git branch -a
+git checkout remotes/origin/dev
+cat README.md
+
+31
+OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+cat readme --> HINT TO CHECK OTHER BRANCHES 
+git tag
+git show secret
+
+32
+rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+rm -f .gitignore
+echo "May I come in?" > text.txt
+git add .
+git commit -m "dsfgh"
+git push origin master
+
+33
+odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+$0 -> to launch shell
+file uppershell
+./uppershell
+set shell=/bin/bash
+whoami
+cat /etc/bandit_pass/bandit33
