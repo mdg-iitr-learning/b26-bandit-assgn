@@ -26,7 +26,8 @@ Q.10-11] base64 - -decode data.txt			6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 
 Q.11-12]  cat data.txt | tr a-zA-Z n-za-mN-ZA-M	JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv		
 
-Q.12-13]ls, mkdir /tmp/mdg , cd /tmp/mdg, cp ~/data.txt, ls, mv data.txt mdg1, xxd -r mdg1 > mdg2 , file mdg2 , mv mdg2 .gz , gunzip mdg2.gz ,  repeat these zipping until you get the file.                                                                     wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+Q.12-13]ls ,mkdir /tmp/mdg , xxd -r data.txt > mdg , file mdg , mv mdg mdg.gz , gzip -d mdg.gz , file mdg , mv mdg mdg.bz2, bzip2  -d mdg .bz2 , file mdg , mv mdg mdg.gz , , gzip -d mdg.gz , file mdg. , mv mdg mdg.tar ,tar xvf mdg.tar, file data5.bin , mv data5.bin data6.bz2 , bzip2 -d data6.bz2 , file data6 , mv data6 data6.tar , tar xvf data6.tar, file data8.bin , mv data8.bin data8.gz ,  gzip -d data8.gz , file data8 , cat data8
+                                  wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 
 
 Q 13-14].Do same as done in lvl 16-17 after we gett the rsa private key 			fGrHPx402xGC7U7rXKDaxiWFTOiF0EN
