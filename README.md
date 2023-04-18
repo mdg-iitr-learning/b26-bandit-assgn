@@ -107,6 +107,7 @@ the password for the fifteenth level is jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt and the
 the password for the sixteenth level is JQttfApK4SeyHwDlI9SXGR50qclOAil1 and the command used is echo jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt | openssl s_client -connect localhost:30001 -ign_eof
 the password for the seventeenth level is not given. it's credentials are given to us. 
 these are 
+
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
 imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
@@ -134,6 +135,7 @@ YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
 dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
 vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
+
 
 the commands used are 
     1  clear
@@ -180,8 +182,13 @@ the commands used are
    42  cat take.private
    43  ssh bandit17@localhost -i take.private -p 2220
    44  history
+
+
 the password for the 18 level is hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg and the command is diff . 
-the password for the 19 level is awhqfNnAbc1naukrpqDYcF95h7HoMTrC and the command is ssh -t bandit18@bandit.labs.overthewire.org -p 2220 "bash --noprofile --norc"
+
+the password for the 19 level is awhqfNnAbc1naukrpqDYcF95h7HoMTrC and the command is ssh -t bandit18@bandit.labs.
+overthewire.org -p 2220 "bash --noprofile --norc"
+
 the password for the 20 level is VxCazJaVykI6W36BkBU0mJTCM8rR95XT and the command is ./bandit20-do cat /etc/bandit_pass/bandit20
 the password for the 21 level is NvEJF7oVjkddltPSrdKEFOllh9V1IBcq and the command is echo "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | nc -l localhost 1234 and then ./suconnect 1234
 the password for the 22 level is WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff and the command is crontab -l and then going where the data specifies. 
