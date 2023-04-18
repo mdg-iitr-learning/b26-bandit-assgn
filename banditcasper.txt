@@ -1,0 +1,123 @@
+Level 1: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+Level 2: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+Level 3: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+Level 4: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+Level 5: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+Level 6: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+Level 7: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+Level 8: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+Level 9: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+Level 10: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+Level 11: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+Level 12: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+12->13:
+mkdir /tmp/check
+cd /tmp/check
+touch check
+cp /home/bandit12/data.txt check
+xxd -r check 		//automatically created a file named “data8”
+cat data8		//wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+13->14
+ssh -p 2220 bandit14@bandit -i sshkey.private
+cd /etc/bandit_pass/
+cat bandit14   			// fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+14->15
+telnet localhost 30000
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq		// jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+15->16
+openssl s_client -connect localhost:30001
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt		// JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+
+16->17
+netstat -t -l -p  		//two ports in 31000-32000
+telnet localhost 31790 		
+JQttfApK4SeyHwDlI9SXGR50qclOAil1   	// RSA key
+mkdir /tmp/camole
+cd /tmp/camole
+vim check.private
+//copied RSA key
+:wq  //save and exit
+chmod 0600 check.private
+ssh -p 2220 bandit17@bandit -i check.private
+cd /etc/bandit_pass/
+cat bandit17		// VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+
+17->18
+diff --normal passwords.new passwords.old		// hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+logout
+ssh -l bandit18 -p 2220 bandit.labs.overthewire.org
+ByeBye!
+
+18->19
+ssh -p 2220 -t bandit18@bandit.labs.overthewire.org /bin/sh
+cat readme		// awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
+19->20
+./bandit20-do
+./bandit20-do id
+./bandit20-do cat /etc/bandit_pass/bandit20     //VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+
+
+
+20->21
+Open 2 terminals
+Terminal 1:				   Terminal 2:
+nc -l 2000 < etc/bandit_pass/bandit20	   ./suconnect 2000      //NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+
+21->22
+cd /etc/cron.d
+cat cronjob_bandit22   			//something related to usr/bin
+cd usr/bin
+cat cronjob_bandit22.sh		// path to another file
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv	// WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+
+22->23
+cd /etc/cron.d
+cat cronjob_bandit23
+cat  /usr/bin/cronjob_bandit23.sh		//understood how shell script works
+echo I am user bandit23 | md5sum |cut -d ' ' -f 1	//  got the file with the password
+/usr/bin/cronjob_bandit23.sh			//executes the sh 
+cat /tmp/ 8ca319486bfbbc3663ea0fbe81326349	// QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+
+23->24
+cd /etc/cron.d/
+cat cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh 
+mkdir /tmp/asdfghj
+chmod 777 /tmp/asdfghj
+cd /tmp/asdfghj
+vim check.sh  		//write shell script
+cp check.sh /var/spool/bandit24/foo
+cat runplease			//VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+
+
+24->25
+Mkdir /tmp/newDir123
+Cd /tmp/newDIr123
+Vim loop.sh
+#!/bin/bash
+
+for i in {0..9}
+do
+        for j in {0..9}
+        do
+                for m in {0..9}
+                do
+                        for n in {0..9}
+                        do
+                                echo $(cat /etc/bandit_pass/bandit24) $i$j$m$n >>check.txt
+                        done
+                done
+        done
+done
+vim check.txt			//to check shell script is correct
+cat check.txt | nc localhost 30002 > chaljaa.txt
+vim chaljaa.txt 			// p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+
+
+
+
+
+
